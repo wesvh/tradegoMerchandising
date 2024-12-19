@@ -1,27 +1,32 @@
 {
   "expo": {
-    "name": "my-app",
-    "slug": "my-app",
+    "name": "TradeGo Merchandising",
+    "slug": "altipal-merchandising",
+    "sdkVersion": "51.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "plugins": ["@react-native-google-signin/google-signin"],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
+      "newArchEnabled": false,
+      "package": "com.altipal.merchandising",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "extra": {
+      "eas": {
+        "projectId": "12f309e7-c4e1-427f-931c-ce0b7dddad4d"
+      }
+    },
+    "owner": "nottauro3"
   }
 }

@@ -1,0 +1,38 @@
+{
+  "cli": {
+    "version": ">= 3.10.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "qa": {
+      "channel": "qa",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview": {
+      "channel": "preview",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "uat": {
+      "channel": "uat",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

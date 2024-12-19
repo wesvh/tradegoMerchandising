@@ -1,0 +1,547 @@
+{
+  "project_info": {
+    "project_number": "180334482698",
+    "project_id": "altipal-traego",
+    "storage_bucket": "altipal-traego.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:2db5923a3f3eae6a9256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.merchandising"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-hf2qupjfd6oqlflfupknfhmc967hkvko.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.merchandising",
+            "certificate_hash": "f783cb71af410ece767b1e18a9fb4ccba73aef42"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:6b56cd66134e78239256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.preview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-i95dfonghktviv5lelbt5n0ijann6tbt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.preview",
+            "certificate_hash": "ba7a8abfbfc69dca90c18d5be20d207988bbb96d"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:de5073778a4bac2a9256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegomovil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-57e2t1su815p1el2kv5por4rpp3na0io.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovil",
+            "certificate_hash": "adc827480de1fc2bc159e5380052557244041c62"
+          }
+        },
+        {
+          "client_id": "180334482698-9cba1sfodccl3ssph5tmjf9pduab26im.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovil",
+            "certificate_hash": "87bae49dd95f87851de9053a61b39a43bbf6e2bb"
+          }
+        },
+        {
+          "client_id": "180334482698-abbor42kmoplv228ikqq6ittj97gbpij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovil",
+            "certificate_hash": "32973bb50f5bcdac244418314e46dbc58d40844a"
+          }
+        },
+        {
+          "client_id": "180334482698-crehusn9qoii0q654ekcti155addmpt9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovil",
+            "certificate_hash": "66b4f414ceefc42e4933923165ca26c076031cb6"
+          }
+        },
+        {
+          "client_id": "180334482698-gr2mnecd8flv5i5m0u2on36pu068d2b6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovil",
+            "certificate_hash": "c4dc15f870cb403fa6de9c3a4858e30dff0901f5"
+          }
+        },
+        {
+          "client_id": "180334482698-lli6gbq60maremq9eq71tso1pbnoa39g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovil",
+            "certificate_hash": "0f364be6d837d6849f68a3d278a1045f04b1756a"
+          }
+        },
+        {
+          "client_id": "180334482698-p3b6kkn1valiv519nr2ukbf9hvvq4ob4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovil",
+            "certificate_hash": "11f29a2ef34a9e0f1a06a6f62f1f74db6ebd8133"
+          }
+        },
+        {
+          "client_id": "180334482698-ru2cmubsq2htf50vv1hvhr1vtct17cpr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovil",
+            "certificate_hash": "af28608d43f02b6702839057ae1694564daf5653"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:1d4ebd341247b0fd9256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegomovilUATfivesix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-jb7t51kdm01ohiodt4n51on9csn602s5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovilUATfivesix",
+            "certificate_hash": "b0af280efd5f03b5665dc614a348167d3fb0b1cc"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:e6a6608b8c9929639256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegomovilUATfour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-rc222ttmptouvr3akdk1gv055ov4rfbi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovilUATfour",
+            "certificate_hash": "f0655fdf7b66c9a06800586717d89c0ac7230a73"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:12c7e4ff8eea41b59256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegomovilUATocho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-ie3edflhpk3nrniml7ppv9kedof6uspe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovilUATocho",
+            "certificate_hash": "969c9bb292a9bd56a49dde27a9ad69ea98c4417e"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:1d0e90804bc4846f9256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegomovilUATseventeen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-1pnqkkcefbb2seqdea0ot270tou3bqbb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegomovilUATseventeen",
+            "certificate_hash": "734b6897fc25c9cdfe5c8830e3d2396a9114e574"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:b31c05b3daec4f8f9256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegoventas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-h9qmmrfiiri3o4h6nm45j2fcvhn5gask.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegoventas",
+            "certificate_hash": "c5227d2944ba422087e675545948891ca488f8c6"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:6223fd5f8d1387709256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegoventas16"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-tfpquchlia5qv2m1qpl4b81t8v5rmt7o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegoventas16",
+            "certificate_hash": "8621915d894d80f487328db0696b71e58cc2bf7b"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:aa84244bb7d1f5729256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegoventasgcp11"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-jhamcccp6jnp32f433qao6goe78m7k0s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegoventasgcp11",
+            "certificate_hash": "92aab63a909513e86f690f39109c9b9bd9c0858c"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:6fee1e41fb233dad9256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegoventasgcp16"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-cifqrpiod79vm0kut1qc76n5m8tdospt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegoventasgcp16",
+            "certificate_hash": "e179743c5c025b8c94532e80a1bcece33cccf291"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:0ba1d6b42bebfdef9256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegoventasgoogle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-lqsdlgg4rapr0vqmdpohdajrs5aff00o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegoventasgoogle",
+            "certificate_hash": "01d0beab97cfa23c9250ab30f37e7262e1f422fc"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180334482698:android:09ce96a7176de3729256f3",
+        "android_client_info": {
+          "package_name": "com.altipal.tradegoventasgoogle16"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180334482698-832t82vl7618gpekqi7u766pfuihicel.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.altipal.tradegoventasgoogle16",
+            "certificate_hash": "01df300d65e1d88e731c412c99e3a96384f865a9"
+          }
+        },
+        {
+          "client_id": "180334482698-tjecqkcpa2c9o11cdvte0q7442nfn8md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrwmDg8se3K3UW0a4NxvsR_W7NHsSDVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180334482698-3t5qsq0gm6f9eh6r9hdj9pvvhe2ld7s2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
