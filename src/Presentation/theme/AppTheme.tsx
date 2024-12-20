@@ -1,0 +1,20 @@
+export const APPS_COLORS = {
+  darkBlue: "#004f9f",
+  whiteBlue: "#e6f3ff",
+  blue: "#4698eb",
+  greenBlue: "#15b790",
+  orange: "#f27319",
+  purple: "#a41083",
+  red: "#ed1c24",
+  yellow: "#FFFF21",
+  green: "#05D469",
+  degradeBlue: "linear-gradient(-150deg, #0685d1, #02aae5)",
+  white: "#ffff",
+  grayDisable: "#BEC2C8",
+  grayBorder: "#E0E0E0",
+  black: "#000",
+  lightGrey: "#ccc",
+  blueTwo: "#4260A7",
+  disabledGrey: "#EBEBE4",
+  yellowOrange: "#FDC401"
+};
