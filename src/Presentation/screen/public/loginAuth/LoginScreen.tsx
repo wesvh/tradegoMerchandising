@@ -9,8 +9,18 @@ import {
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { LoginStyle as styles } from "./LoginStyle";
+import { LoginViewModel } from "./LoginViewModel";
+import { slogan, publishVersion } from "../../../utils/constants";
 
 export const LoginScreen = () => {
+
+  const {
+    loadingSignIn,
+    loadindState,
+    versionVisibility,
+    isPressed,
+    singIn
+  } = LoginViewModel();
 
   return (
     <View style={styles.container}>
@@ -34,7 +44,7 @@ export const LoginScreen = () => {
             />
           </TouchableNativeFeedback>
           <View>
-            <TouchableOpacity style={styles.tocheableBtn} >
+          <TouchableOpacity onPress={singIn} style={styles.tocheableBtn} disabled={isPressed}>
               <Text style={styles.texto}>Ingresa con tu cuenta de Google</Text>
             </TouchableOpacity>
             <Text style={styles.texto2}> (Correo corporativo) </Text>
@@ -44,14 +54,14 @@ export const LoginScreen = () => {
           </Text>
           <Text style={styles.texto4}> J. Maxwell </Text>
         </View>
-       {/*  <Text style={styles.textStyle}>
+       { <Text style={styles.textStyle}>
           {versionVisibility && loadindState && "Actualizando aplicación.."}
           {versionVisibility && loadingSignIn && !loadindState && "Iniciando sesión.."}
           {versionVisibility &&
             !loadingSignIn &&
             !loadindState &&
             `Sprint 18 | ${slogan} | ${publishVersion}`}
-        </Text> */}
+        </Text>}
       </ImageBackground>
     </View>
   );
