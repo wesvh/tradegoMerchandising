@@ -16,17 +16,10 @@ class Api {
   executeBuilder = (rootAPI: any) => {
     this.instance = this.createInstance(rootAPI);
     this.instance.interceptors.response.use((opt: AxiosResponse) => {
-      console.log(`${rootAPI}${opt.config.url}`, opt.config.method, "Code: ", opt.status);
       return opt;
     });
     this.instance.interceptors.request.use((opt: InternalAxiosRequestConfig) => {
-      opt.headers.setAccept(Date.now());
-      console.log(
-        `${rootAPI}${opt.url}`,
-        opt.method,
-        opt.data ? "Data: " + JSON.stringify(opt.data) : ""
-      );
-
+      opt.headers.setAccept(Date.now());   
       return opt;
     });
   };
@@ -81,7 +74,6 @@ class Api {
       // Incrementa el número de intentos y el tiempo de espera
       retries += 1;
       delay *= 1.2;
-      console.log("Retrying request... with Delay: ", delay);
     }
 
     throw new Error("Max retries reached");

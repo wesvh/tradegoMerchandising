@@ -7,7 +7,7 @@ export const SaveItemUseCase = async (key: any, value: any) => {
     await saveItemStorage(key, value);
     return true;
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return false;
   }
 };

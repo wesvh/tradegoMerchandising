@@ -32,9 +32,9 @@ export const LoginViewModel = () => {
     try {
       const userLocal = await getItemStorage("usuario");
       setIsPressed(true);
-      const tokenNotification =123
-      
+      const tokenNotification =123      
       setLoadingSignIn(true);    
+      
       if (userLocal) {
         const { salesZoneId } = await getItemStorage("saleZone");
           RequestUseCase("/Config/token", "PUT", {
@@ -47,8 +47,10 @@ export const LoginViewModel = () => {
         return;
       }
 
-      const datosUser = await LoginGoogleUseCase(setLoadingSignIn);      
-      await SaveSessionUseCase(datosUser, true);
+      const datosUser = await LoginGoogleUseCase(setLoadingSignIn);
+      if(!datosUser) {return false;}
+
+      await SaveSessionUseCase(datosUser, true);     
      
       const {
         data: userData,
@@ -59,7 +61,6 @@ export const LoginViewModel = () => {
         deviceId: tokenNotification,
         version: publishVersion
       });   
-
 
       await getSession();
 
@@ -101,6 +102,7 @@ export const LoginViewModel = () => {
     setLoadingSignIn,
     isPressed,
     setIsPressed,
-    singIn
+    singIn,
+    user
   };
 };

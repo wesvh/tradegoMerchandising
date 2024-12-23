@@ -16,7 +16,7 @@ export const SaveSessionUseCase = async (data: any, first = false) => {
     await saveEmail(data.user.email);
     return true;
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return false;
   }
 };

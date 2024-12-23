@@ -5,7 +5,7 @@ export class AsyncStorageDep {
     try {
       await AsyncStorage.setItem(key, value);
     } catch (error) {
-      console.log("ERROR AL GUARDAR " + key + ": " + error);
+      console.error("ERROR AL GUARDAR " + key + ": " + error);
     }
   };
   public getItem = async (key: string) => {
@@ -13,14 +13,14 @@ export class AsyncStorageDep {
       const item = await AsyncStorage.getItem(key);
       return item;
     } catch (error) {
-      console.log("ERROR AL LEER DATOS: " + error);
+      console.error("ERROR AL LEER DATOS: " + error);
     }
   };
   public deleteItem = async (key: string) => {
     try {
       await AsyncStorage.removeItem(key);
     } catch (error) {
-      console.log("ERROR AL CERRAR LA SESIÓN: " + error);
+      console.error("ERROR AL CERRAR LA SESIÓN: " + error);
     }
   };
 
@@ -30,7 +30,7 @@ export class AsyncStorageDep {
       await AsyncStorage.clear();
       await AsyncStorage.setItem("tokenNotification", tokenNotification || "");
     } catch (error) {
-      console.log("ERROR AL CERRAR LA SESIÓN QUITANDO TODOS LOS DATOS: " + error);
+      console.error("ERROR AL CERRAR LA SESIÓN QUITANDO TODOS LOS DATOS: " + error);
     }
   };
 }

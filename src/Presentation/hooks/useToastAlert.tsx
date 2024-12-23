@@ -60,7 +60,6 @@ export const useToastAlert = () => {
   };
 
   const DisplayAlertCustomButtons = (title: string, message: string, buttons: any) => {
-    console.log("RENDERIZANDO ALERTA");
     Alert.alert(title, message, buttons);
   };
 

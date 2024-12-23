@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { LoginScreen} from "../screen/public";
+import { LoginScreen, LoadScreen, NavigationDrawer} from "../screen/public";
 import { navigationRef } from "./RootNavigation";
 import { ToastProvider } from "react-native-toast-notifications";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
@@ -43,6 +43,8 @@ export default function NavigationStack() {
         }}>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Auth" component={LoginScreen} />
+          <Stack.Screen name="LoaderScreen" component={LoadScreen} />
+          <Stack.Screen name="MenuDrawer" component={NavigationDrawer} />
         </Stack.Navigator>
       </ToastProvider>
     </NavigationContainer>

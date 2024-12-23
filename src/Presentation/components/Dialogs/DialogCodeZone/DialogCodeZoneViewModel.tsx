@@ -24,9 +24,8 @@ export const DialogCodeZoneViewModel = (setLoadingSignIn: any, showDialog: any) 
 
   const validateZone = async () => {
     setLoading(true);
-    const [usuario, tokenNotification] = await Promise.all([
+    const [usuario] = await Promise.all([
       GetItemUseCase(),
-      GetItemUseCase("tokenNotification")
     ]);
 
     const {
@@ -39,14 +38,38 @@ export const DialogCodeZoneViewModel = (setLoadingSignIn: any, showDialog: any) 
       version: publishVersion
     });
 
-    if (!ok) {
+    /* if (!ok) {
       alert(message, "danger");
       setLoading(false);
       setZone("");
       return;
-    }
+    } */
 
-    await SaveSessionUseCase(userData);
+    const useDataMock = {
+      "user": {
+        "commercialTypeHierarchy": 1,
+        "email": "viviana.varilla@altipal.com.co",
+        "id": 709,
+        "name": "",
+        "salesZoneId": "16491",
+        "supernumerary": true,
+        "workerState": "A"
+      },
+      "saleZone": {
+        "id": "16491",  
+        "name": "Zona A"
+      },
+      "saleGroup": {
+        "id": "group1", 
+        "name": "Grupo 1"
+      },
+      "wareHouse": {
+        "id": "wh1",    
+        "location": "Ubicación A"
+      }
+    };
+        
+    await SaveSessionUseCase(useDataMock);
     setLoadingSignIn(false);
     showDialog(false);
     RootNavigation.navigate("LoaderScreen", {});

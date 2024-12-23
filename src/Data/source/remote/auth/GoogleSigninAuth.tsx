@@ -32,17 +32,19 @@ export class GoogleSigninAuth {
         return false;
       }
     } catch (error) {
-      console.log("Error: -> " + error);
+      console.error("Error: -> " + error);
       setLoad(false);
     }
   };
 
-  public logout = async () => {
-    try {
-      await GoogleSignin.revokeAccess();
-      await auth().signOut();
-    } catch (error) {
-      console.log(`NO SE PUDO CERRAR LA SESIÓN: ${error}`);
-    }
-  };
+public logout = async () => {
+  try {
+    const currentUser = auth().currentUser;
+    if (!currentUser) {  return; }
+    await GoogleSignin.revokeAccess();
+    await auth().signOut();
+  } catch (error) {
+    console.log(`NO SE PUDO CERRAR LA SESIÓN: ${error}`);
+  }
+};
 }

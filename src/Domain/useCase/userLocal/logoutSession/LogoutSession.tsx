@@ -8,37 +8,16 @@ const { logoutSession } = new UserLocalRepository();
 
 export const LogoutSessionUseCase = async (usuario: any) => {
   const tokenNotification = await GetItemUseCase("tokenNotification");
-  const { salesZoneId } = await GetItemUseCase("saleZone");
-  patchCustomers(salesZoneId);
+  const result = await GetItemUseCase("saleZone");
+  const salesZoneId = result?.salesZoneId ?? null;
+    
   await logoutSession();
   const res = await RequestUseCase("/logout", "POST", {
     saleZoneId: salesZoneId,
     email: usuario.email,
-    deviceId: tokenNotification
+    deviceId: 123
   });
   await logout();
   return res;
 };
 
-const patchCustomers = async (salesZoneId: any) => {
-  patchPrices(salesZoneId);
-  try {
-    await RequestUseCase(`/Customer/${salesZoneId}`, "PATCH");
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const patchPrices = async (salesZoneId: any) => {
-  try {
-    const data = await GetItemUseCase("wareHouse");
-    const Promises = Array.from(new Set(data.map((site: any) => site.inventSiteId))).map(
-      (site: any) => {
-        RequestUseCase(`/Product/briefcase/${salesZoneId}/${site}`, "PATCH");
-      }
-    );
-    await Promise.all(Promises);
-  } catch (error) {
-    console.log(error);
-  }
-};

@@ -36,8 +36,6 @@ export class UserLocalRepository implements IUserLocalRepository {
   }
 
   async logoutSession(): Promise<void> {
-    const currentDate = await localDB.getItem("lastDownloadDate");
     await localDB.restoreStorage();
-    await localDB.saveItem("lastDownloadDate", currentDate as string);
   }
 }

@@ -15,7 +15,7 @@ export const useLogout = () => {
       RootNavigation.navigate("Auth", {});
       ResetReducer();
       saveContext("isLogouting", true);
-      const user = await GetItemUseCase();
+      const user = await GetItemUseCase();      
       LogoutSessionUseCase(user);    
     } catch (e) {
       console.error(e);
