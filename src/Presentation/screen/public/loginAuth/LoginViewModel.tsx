@@ -1,5 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LoginGoogleUseCase } from "../../../../Domain/useCase/AuthWithGoogle/LoginGoogleUseCase";
+import { useUserLocal, useToastAlert } from "../../../hooks";
+import { RequestUseCase } from "../../../../Domain/useCase/Request/RequestUseCase";
+import { useLogout } from "../../../hooks/useLogout";
+import * as RootNavigation from "../../../navigation/RootNavigation";
+import { publishVersion } from "src/Presentation/utils/constants";
+import { SaveSessionUseCase } from "../../../../Domain/useCase/userLocal/saveSession/SaveSession";
 
 /**
  * logic: state, methods, variables
@@ -11,12 +17,25 @@ export const LoginViewModel = () => {
   const [loadindState] = useState(false);
   const [versionVisibility, setVersionVisibility] = useState(true);
   const [visibility, setVisibility] = useState(false);
+  const { getSession, user, getItemStorage } = useUserLocal();
+  const { logoutSessionData } = useLogout();
+  const { alert } = useToastAlert();
+
+  const closeDialogSansSession = async (bool: boolean) => {
+    await logoutSessionData();
+    setVisibility(bool);
+    setVersionVisibility(true);
+    setLoadingSignIn(false);
+  };
 
   const singIn = async () => {
     try {
+      const userLocal = await getItemStorage("usuario");
       setIsPressed(true);
+      const tokenNotification =123
+      
       setLoadingSignIn(true);    
-     /*  if (userLocal) {
+      if (userLocal) {
         const { salesZoneId } = await getItemStorage("saleZone");
           RequestUseCase("/Config/token", "PUT", {
             email: userLocal?.email,
@@ -26,11 +45,12 @@ export const LoginViewModel = () => {
         setLoadingSignIn(false);
         RootNavigation.navigate("MenuDrawer", {});
         return;
-      } */
+      }
 
       const datosUser = await LoginGoogleUseCase(setLoadingSignIn);      
+      await SaveSessionUseCase(datosUser, true);
      
-    /*   const {
+      const {
         data: userData,
         ok,
         message
@@ -39,6 +59,7 @@ export const LoginViewModel = () => {
         deviceId: tokenNotification,
         version: publishVersion
       });   
+
 
       await getSession();
 
@@ -49,15 +70,16 @@ export const LoginViewModel = () => {
         setVisibility(false);
         setLoadingSignIn(false);
         return;
-      }
+      }      
 
       if (!userData.hasOwnProperty("saleZone")) {
         setVisibility(true);
         return;
       }
 
+      await SaveSessionUseCase(userData);
       setLoadingSignIn(false);
-      RootNavigation.navigate("LoaderScreen", {}); */
+      RootNavigation.navigate("LoaderScreen", {});
 
     } catch (error) {
       console.error("error", error);
@@ -73,6 +95,7 @@ export const LoginViewModel = () => {
     loadindState,
     versionVisibility,
     visibility,
+    closeDialogSansSession,
     setVersionVisibility,
     setVisibility,
     setLoadingSignIn,

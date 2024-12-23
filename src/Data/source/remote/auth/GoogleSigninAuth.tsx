@@ -13,6 +13,7 @@ export class GoogleSigninAuth {
       // Get the users ID token
 
       const { data } = await GoogleSignin.signIn();
+      if(!data) return false;
       const { idToken } = data      
 
       // Create a Google credential with the token

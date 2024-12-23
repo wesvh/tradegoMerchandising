@@ -11,8 +11,10 @@ export class Request implements IRequest {
     data: any,
     isPortal = false
   ): Promise<any> {
-    const currAp = isPortal ? apiPortal : api;
-    const response = await currAp.ExecutePetition(endpoint, method, data);
+    const currAp = isPortal ? apiPortal : api;    
+    const response = await currAp.ExecutePetition(endpoint, method, data);    
+    console.log(response);
+    
     return response;
   }
   public async retryableRequestHttps(

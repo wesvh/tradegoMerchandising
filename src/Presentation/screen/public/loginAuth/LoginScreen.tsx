@@ -11,6 +11,7 @@ import { StatusBar } from "expo-status-bar";
 import { LoginStyle as styles } from "./LoginStyle";
 import { LoginViewModel } from "./LoginViewModel";
 import { slogan, publishVersion } from "../../../utils/constants";
+import DialogCodeZone from "../../../components/Dialogs/DialogCodeZone/DialogCodeZone";
 
 export const LoginScreen = () => {
 
@@ -18,8 +19,13 @@ export const LoginScreen = () => {
     loadingSignIn,
     loadindState,
     versionVisibility,
+    visibility,
     isPressed,
-    singIn
+    singIn,
+    setVisibility,
+    closeDialogSansSession,
+    setVersionVisibility,
+    setLoadingSignIn
   } = LoginViewModel();
 
   return (
@@ -28,13 +34,13 @@ export const LoginScreen = () => {
         source={require("../../../assets/BG2_Login.png")}
         resizeMode="stretch"
         style={styles.image}>
-       {/*  <DialogCodeZone
+        <DialogCodeZone
           visibility={visibility}
           setVisible={closeDialogSansSession}
           showDialog={setVisibility}
           showVersion={setVersionVisibility}
           setLoadingSignIn={setLoadingSignIn}
-        /> */}
+        />
         <StatusBar />
         <View style={styles.container2}>
           <TouchableNativeFeedback >
