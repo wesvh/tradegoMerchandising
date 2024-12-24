@@ -13,9 +13,6 @@ export class UserLocalRepository implements IUserLocalRepository {
   async saveSaleGroup(saleGroup: any): Promise<void> {
     await localDB.saveItem("saleGroup", JSON.stringify(saleGroup));
   }
-  async saveWareHouse(wareHouse: any): Promise<void> {
-    await localDB.saveItem("wareHouse", JSON.stringify(wareHouse));
-  }
   async saveEmail(email: string): Promise<void> {
     await localDB.saveItem("emailUser", JSON.stringify(email));
   }
@@ -27,8 +24,8 @@ export class UserLocalRepository implements IUserLocalRepository {
     const item: any = JSON.parse(data as any);
     return item;
   }
-  async saveSelectedWareHouseId(id: any): Promise<void> {
-    await localDB.saveItem("selectedWareHouseId", JSON.stringify(id));
+  async saveHierarchyId(id: any): Promise<void> {
+    await localDB.saveItem("hierarchyId", JSON.stringify(id));
   }
 
   async saveItemStorage(key: string, value: any): Promise<void> {

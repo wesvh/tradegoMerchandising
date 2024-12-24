@@ -19,7 +19,6 @@ import pixelRatio from "src/Presentation/utils/pixelRatio";
 const Drawer = createDrawerNavigator();
 
 export function NavigationDrawer() {
-  const [openModal, setOpenModal] = useState(false);
   StatusBar.setBackgroundColor(APPS_COLORS.whiteBlue);
   StatusBar.setBarStyle("dark-content", true);
 
@@ -66,7 +65,7 @@ const MenuItems = ({ navigation, state }: MenuItemProps) => {
   const { routes, index } = state;
   const { navigateOptionMenu, activeScreen } =
     NavigationDrawerViewModel(navigation, routes, index);
-  const [textHeaderPrint, setTextPrint] = useState("");
+  const [textHeaderPrint, setTextPrint] = useState(""); 
   const { getItemStorage } = useUserLocal();
 
   useEffect(() => {
@@ -74,9 +73,9 @@ const MenuItems = ({ navigation, state }: MenuItemProps) => {
       const usuario = await getItemStorage("usuario");      
       const salesZone = await getItemStorage("saleZone");
       const salesGroup = await getItemStorage("saleGroup");
-      setTextPrint(`Asesor: ${usuario?.name || ""} (${salesZone?.advisorId})
+      setTextPrint(`Asesor: ${usuario?.name || ""} (${usuario?.code})
     Zona: ${salesZone?.description} (${salesZone?.salesZoneId})
-    Grupo: ${salesGroup?.name || "No hay grupo asignado"} (${salesZone?.salesGroupId})`);
+    Grupo: ${salesGroup?.name || "No hay grupo asignado"} (${salesGroup?.salesGroupId})`);
     })();
   }, []);
 

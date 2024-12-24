@@ -4,7 +4,6 @@ import { GetItemUseCase } from "../../../../Domain/useCase/userLocal/getItem/Get
 import { useToastAlert } from "../../../hooks";
 import * as RootNavigation from "../../../navigation/RootNavigation";
 import { SaveSessionUseCase } from "../../../../Domain/useCase/userLocal/saveSession/SaveSession";
-import { publishVersion } from "src/Presentation/utils/constants";
 
 export const DialogCodeZoneViewModel = (setLoadingSignIn: any, showDialog: any) => {
   const [zone, setZone] = useState(``);
@@ -34,42 +33,16 @@ export const DialogCodeZoneViewModel = (setLoadingSignIn: any, showDialog: any) 
       data: userData
     } = await RequestUseCase(`/login/validatezone/${zone}`, "POST", {
       email: usuario.email,
-      deviceId: "11",
-      version: publishVersion
     });
 
-    /* if (!ok) {
+    if (!ok) {
       alert(message, "danger");
       setLoading(false);
       setZone("");
       return;
-    } */
-
-    const useDataMock = {
-      "user": {
-        "commercialTypeHierarchy": 1,
-        "email": "viviana.varilla@altipal.com.co",
-        "id": 709,
-        "name": "",
-        "salesZoneId": "16491",
-        "supernumerary": true,
-        "workerState": "A"
-      },
-      "saleZone": {
-        "id": "16491",  
-        "name": "Zona A"
-      },
-      "saleGroup": {
-        "id": "group1", 
-        "name": "Grupo 1"
-      },
-      "wareHouse": {
-        "id": "wh1",    
-        "location": "Ubicación A"
-      }
-    };
+    }
         
-    await SaveSessionUseCase(useDataMock);
+    await SaveSessionUseCase(userData);
     setLoadingSignIn(false);
     showDialog(false);
     RootNavigation.navigate("LoaderScreen", {});
