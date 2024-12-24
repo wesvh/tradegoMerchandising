@@ -64,19 +64,19 @@ interface MenuItemProps {
 
 const MenuItems = ({ navigation, state }: MenuItemProps) => {
   const { routes, index } = state;
-  const { navigateOptionMenu, responseSubscribe, activeScreen } =
+  const { navigateOptionMenu, activeScreen } =
     NavigationDrawerViewModel(navigation, routes, index);
   const [textHeaderPrint, setTextPrint] = useState("");
   const { getItemStorage } = useUserLocal();
 
   useEffect(() => {
     (async () => {
-      const usuario = await getItemStorage("usuario");
+      const usuario = await getItemStorage("usuario");      
       const salesZone = await getItemStorage("saleZone");
       const salesGroup = await getItemStorage("saleGroup");
       setTextPrint(`Asesor: ${usuario?.name || ""} (${salesZone?.advisorId})
-      Zona: ${salesZone?.description} (${salesZone?.salesZoneId})
-      Grupo: ${salesGroup?.name || "No hay grupo asignado"} (${salesZone?.salesGroupId})`);
+    Zona: ${salesZone?.description} (${salesZone?.salesZoneId})
+    Grupo: ${salesGroup?.name || "No hay grupo asignado"} (${salesZone?.salesGroupId})`);
     })();
   }, []);
 

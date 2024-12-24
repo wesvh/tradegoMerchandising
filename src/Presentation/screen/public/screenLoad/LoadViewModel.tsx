@@ -20,7 +20,9 @@ export const LoadViewModel = (props: any) => {
   }, []);
 
   const LoadData = async () => {
-    navigation.replace("MenuDrawer");
+    setTimeout(() => {
+      navigation.replace("MenuDrawer");
+    }, 900)
   };
 
   return { confiLoadPercent, userData };
