@@ -82,7 +82,7 @@ export const LoginViewModel = () => {
         data: sessionData,
         ok,
         message
-      } = await RequestUseCase("/Config/session/existinotherdevice", "POST", {
+      } = await RequestUseCase("/login/existsession", "POST", {
         email: email
       });  
       
