@@ -67,8 +67,8 @@ export const LoginViewModel = () => {
       
       await checkSessionOnOtherDevices(userData.email);
 
-      if (userData.hasOwnProperty("hierarchyId")){
-        setVisibility(userData.hierarchyId == promotorSupernumerario);
+      if (userData?.hierarchyId == promotorSupernumerario ){
+        setVisibility(true);
         return;
       }
 

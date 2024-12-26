@@ -49,7 +49,7 @@ const DialogCodeZone = ({
           <TouchableOpacity
             style={[styles.button, styles.buttonClose]}
             onPress={validateZone}
-            disabled={zone.length === 0}>
+            >
             <Text style={styles.textStyle}>Validar</Text>
           </TouchableOpacity>
         ) : (

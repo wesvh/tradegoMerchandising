@@ -22,6 +22,11 @@ export const DialogCodeZoneViewModel = (setLoadingSignIn: any, showDialog: any) 
   };
 
   const validateZone = async () => {
+
+    if (zone === "") {
+      alert("Ingrese un código de zona", "danger");
+      return;
+    }
     setLoading(true);
     const [usuario] = await Promise.all([
       GetItemUseCase(),
