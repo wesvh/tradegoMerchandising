@@ -73,9 +73,11 @@ const MenuItems = ({ navigation, state }: MenuItemProps) => {
       const usuario = await getItemStorage("usuario");      
       const salesZone = await getItemStorage("saleZone");
       const salesGroup = await getItemStorage("saleGroup");
-      setTextPrint(`Asesor: ${usuario?.name || ""} (${usuario?.code})
-    Zona: ${salesZone?.description} (${salesZone?.salesZoneId})
-    Grupo: ${salesGroup?.name || "No hay grupo asignado"} (${salesGroup?.salesGroupId})`);
+      setTextPrint(`
+        Asesor: ${usuario?.name || ""} (${usuario?.code})
+        Zona: ${salesZone?.description} (${salesZone?.salesZoneId})
+        Grupo: ${salesGroup?.name || "No hay grupo asignado"} (${salesGroup?.salesGroupId})
+      `);
     })();
   }, []);
 
@@ -236,11 +238,11 @@ const styles = StyleSheet.create({
   textHeader: {
     color: "#ffffff",
     fontSize: 15 / pixelRatio,
-    alignContent: "center",
+    textAlign: "center",
     marginTop: 2,
-    //marginRight: 5,
-    marginLeft: 8
-  },
+    marginLeft: 0,
+    marginRight: 10,
+  },  
   itemMenu: {
     fontSize: 12 / pixelRatio
   },

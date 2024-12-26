@@ -25,8 +25,8 @@ export class GoogleSigninAuth {
       if (idToken !== null) {
         return {
           idToken,
-          email: 'viviana.varilla@altipal.com.co',
-          name: 'Prueba'
+          email: usuarioData.user?.email,
+          name: usuarioData.user?.displayName,
         };
       } else {
         return false;
