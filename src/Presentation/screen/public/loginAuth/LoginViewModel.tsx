@@ -33,16 +33,9 @@ export const LoginViewModel = () => {
     try {
       const userLocal = await getItemStorage("usuario");
       setIsPressed(true);
-      const tokenNotification =123      
       setLoadingSignIn(true);    
       
-      if (userLocal) {
-        const { salesZoneId } = await getItemStorage("saleZone");
-          RequestUseCase("/Config/token", "PUT", {
-            email: userLocal?.email,
-            deviceId: tokenNotification,
-            saleZoneId: salesZoneId
-          });
+      if (userLocal) {        
         setLoadingSignIn(false);
         RootNavigation.navigate("MenuDrawer", {});
         return;

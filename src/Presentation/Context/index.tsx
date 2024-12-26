@@ -19,19 +19,10 @@ export const ContextProvider = ({ children }: any) => {
   const alerted2 = useRef(false);
 
   const initialState = {
-    currentCustomer: {},
-    currentCreateCustomer: {},
-    dataCategory: [],
     coords: {},
     internet: false,
     reloadTrans: 0,
     boolReload: true,
-    closeWorkDay: [],
-    currentAddress: {
-      street: "",
-      canEdit: false,
-      postalCode: ""
-    },
     isProcesing: false,
     precautionInfo: {
       id: null,
@@ -40,17 +31,8 @@ export const ContextProvider = ({ children }: any) => {
     },
     precaution: [],
     precautionTotal: [],
-    consignments: [],
-    consignmentTotal: [],
     precautionId: 0,
-    routeWorkOff: {},
-    sendingPendings: false,
-    isLoadingCustomers: false,
-    isLoadingCloseWorkDay: false,
-    salesZone: {},
     usuario: {},
-    cuadreCaja: {},
-    showSurveysPedidos: false
   };
 
   const reducer = (state: any, action: any) => {
