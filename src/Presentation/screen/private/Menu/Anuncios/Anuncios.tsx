@@ -42,34 +42,64 @@ export default function Anuncios(props: any) {
             style={styles.picker}>
             <Picker.Item
               style={styles.itemStyle}
-              label={"Ejecución de Ventas"}
+              label={"Resumen General"}
+              value={`https://datastudio.google.com/u/0/reporting/1d9180f4-7ca1-4f7c-8066-2b45b767024b/page/ZBm3C?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`} // param encoded %7B%22ds0.zona_de_ventas%22%3A%2215492%22%7D
+              key={0}
+            />     
+            <Picker.Item
+              style={styles.itemStyle}
+              label={"Control de Visitas"}
+              value={`https://datastudio.google.com/u/0/reporting/1d9180f4-7ca1-4f7c-8066-2b45b767024b/page/ZBm3C?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`} // param encoded %7B%22ds0.zona_de_ventas%22%3A%2215492%22%7D
+              key={0}
+            />     
+            <Picker.Item
+              style={styles.itemStyle}
+              label={"Cobertura"}
+              value={`https://datastudio.google.com/u/0/reporting/1d9180f4-7ca1-4f7c-8066-2b45b767024b/page/ZBm3C?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`} // param encoded %7B%22ds0.zona_de_ventas%22%3A%2215492%22%7D
+              key={0}
+            />      
+            <Picker.Item
+              style={styles.itemStyle}
+              label={"Efectividad"}
+              value={`https://datastudio.google.com/u/0/reporting/1d9180f4-7ca1-4f7c-8066-2b45b767024b/page/ZBm3C?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`} // param encoded %7B%22ds0.zona_de_ventas%22%3A%2215492%22%7D
+              key={0}
+            /> 
+            <Picker.Item
+              style={styles.itemStyle}
+              label={"Profundidad"}
               value={`https://datastudio.google.com/u/0/reporting/1d9180f4-7ca1-4f7c-8066-2b45b767024b/page/ZBm3C?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`} // param encoded %7B%22ds0.zona_de_ventas%22%3A%2215492%22%7D
               key={0}
             />
             <Picker.Item
               style={styles.itemStyle}
-              label={"Rotación de Cartera"}
-              value={`https://datastudio.google.com/u/0/reporting/c9d52f2f-a57d-4798-80ad-f0588d3a2676/page/p_q7jokw3yzc?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`}
-              key={1}
+              label={"Cartera"}
+              value={`https://datastudio.google.com/u/0/reporting/1d9180f4-7ca1-4f7c-8066-2b45b767024b/page/ZBm3C?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`} // param encoded %7B%22ds0.zona_de_ventas%22%3A%2215492%22%7D
+              key={0}
+            /> 
+            <Picker.Item
+              style={styles.itemStyle}
+              label={"Devoluciones"}
+              value={`https://datastudio.google.com/u/0/reporting/1d9180f4-7ca1-4f7c-8066-2b45b767024b/page/ZBm3C?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`} // param encoded %7B%22ds0.zona_de_ventas%22%3A%2215492%22%7D
+              key={0}
+            /> 
+            <Picker.Item
+              style={styles.itemStyle}
+              label={"Valor Venta"}
+              value={`https://datastudio.google.com/u/0/reporting/1d9180f4-7ca1-4f7c-8066-2b45b767024b/page/ZBm3C?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`} // param encoded %7B%22ds0.zona_de_ventas%22%3A%2215492%22%7D
+              key={0}
             />
             <Picker.Item
               style={styles.itemStyle}
-              label={"Profundidad de Portafolio"}
-              value={`https://datastudio.google.com/u/0/reporting/fff58f6b-67c9-463e-a690-7a71658293e1/page/p_trs9yq5zzc?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`}
-              key={2}
+              label={"Valor Venta Surtiapp"}
+              value={`https://datastudio.google.com/u/0/reporting/1d9180f4-7ca1-4f7c-8066-2b45b767024b/page/ZBm3C?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`} // param encoded %7B%22ds0.zona_de_ventas%22%3A%2215492%22%7D
+              key={0}
             />
             <Picker.Item
               style={styles.itemStyle}
-              label={"Ejecución de Kits"}
-              value={`https://datastudio.google.com/u/0/reporting/0c1da289-559d-4ffa-b8d4-37487aed33c1/page/p_3fom4bad0c?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`}
-              key={3}
-            />
-            <Picker.Item
-              style={styles.itemStyle}
-              label={"Ejecución de Ventas por Proveedor"}
-              value={`https://lookerstudio.google.com/u/0/reporting/0efe4bb1-73ef-42bc-8d84-020d06aaa051/page/p_3fom4bad0c?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`}
-              key={4}
-            />
+              label={"Análisis General"}
+              value={`https://datastudio.google.com/u/0/reporting/1d9180f4-7ca1-4f7c-8066-2b45b767024b/page/ZBm3C?params=%7B%22ds0.zona_de_ventas%22%3A%22${saleZone}%22%7D`} // param encoded %7B%22ds0.zona_de_ventas%22%3A%2215492%22%7D
+              key={0}
+            /> 
           </Picker>
         </View>
       </View>

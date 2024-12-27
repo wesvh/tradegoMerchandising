@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useUserLocal } from "../../../hooks";
+import { RealmTransactionsHook } from "../../../helpers/RealmTransactionsHook";
+
 /**
  * logic: state, methods, variables
  * @description the logic o
@@ -8,8 +10,9 @@ import { useUserLocal } from "../../../hooks";
 export const LoadViewModel = (props: any) => {
   const { navigation } = props;
   const [userData, setUserData] = useState({ name: "", email: "" });
-  const [confiLoadPercent] = useState(0);
+  const [confiLoadPercent, setConfigLoadPercent] = useState(0);
   const { getItemStorage } = useUserLocal();
+  const { writeLoadInitialData } = RealmTransactionsHook();
 
   useEffect(() => {
     (async () => {
@@ -20,9 +23,8 @@ export const LoadViewModel = (props: any) => {
   }, []);
 
   const LoadData = async () => {
-    setTimeout(() => {
-      navigation.replace("MenuDrawer");
-    }, 900)
+    await writeLoadInitialData(setConfigLoadPercent);
+    navigation.replace("MenuDrawer");
   };
 
   return { confiLoadPercent, userData };
