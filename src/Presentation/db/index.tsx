@@ -1,15 +1,15 @@
 import { createRealmContext } from "@realm/react";
 import {
-  ModelExhibidorTypesDB  
+  ParametrizationConfig,
 } from "./schema";
 
+const parametrizacionSchemas = Object.values(ParametrizationConfig).map(model => model);
+const mergeSchemas = [...parametrizacionSchemas];
 
 export const GeneralConfigContext = createRealmContext({
-  schema: [
-    ModelExhibidorTypesDB   
-  ],
+  schema: [...mergeSchemas],
   path: "business.realm",
-  schemaVersion: 36,
+  schemaVersion: 1,
   deleteRealmIfMigrationNeeded: true
 });
 

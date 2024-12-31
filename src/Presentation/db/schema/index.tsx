@@ -1,8 +1,3 @@
-import {
-  ModelExhibidorTypesDB,
-} from "./GeneralConfig";
+import * as ParametrizationConfig from "./ParameterizationConfig";
 
-
-export {
-  ModelExhibidorTypesDB,
-};
+export { ParametrizationConfig };
