@@ -5,8 +5,6 @@ export const useInsertion = () => {
   
   const createBatchsWithRealm = async (ArrayToInsert: any[], table: string, realmStage: any) => {
     try {
-      console.log("Tabla ->", table, "Elementos a insertar", ArrayToInsert);
-            
       await validationInTransaction(realmStage.isInTransaction, 1500);
       const batchSize = 50; // Define el tamaño del bloque
       const totalObjects = ArrayToInsert.length;
