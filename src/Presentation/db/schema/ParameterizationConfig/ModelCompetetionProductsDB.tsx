@@ -4,7 +4,7 @@ import { ObjectSchema } from "realm";
 export class ModelCompetetionProductsDB extends Realm.Object<ModelCompetetionProductsDB> {
   number!: string;
   code!: string;
-  competitionProductName!: string;
+  name!: string;
   brand!: string;
   status!: boolean;
 
@@ -14,7 +14,7 @@ export class ModelCompetetionProductsDB extends Realm.Object<ModelCompetetionPro
     properties: {
       number: "string",    
       code: "string",         
-      competitionProductName: "string",  
+      name: "string",  
       brand: "string",  
       status: { default: false, type: "bool"},
     },

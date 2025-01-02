@@ -3,11 +3,10 @@ import { ModelExhibidorTypesDB } from "./ModelExhibidorTypesDB";
 import { ObjectSchema } from "realm";
 
 export class ModelExhibidoresDB extends Realm.Object<ModelExhibidoresDB> {
-  id!: number;
   number!: string;
   nit!: string;
   name!: string;
-  exhibidorType!: ModelExhibidorTypesDB;
+  exhibidorType!: object;
   startDate!: string;
   endDate!: string;
   status!: boolean;
@@ -19,7 +18,7 @@ export class ModelExhibidoresDB extends Realm.Object<ModelExhibidoresDB> {
       number: "string",
       nit: "string",
       name: "string",
-      exhibidorType: "exhibidortypes", 
+      exhibidorType: "exhibidortypes?", 
       startDate: "string",
       endDate: "string",
       status: { type: "bool", default: true }

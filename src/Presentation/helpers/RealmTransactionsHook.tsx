@@ -48,35 +48,28 @@ export const RealmTransactionsHook = () => {
     let loadPercent = 0;
 
     const elementsToLoad = parametrizationConfig.filter(
-      (element) =>
-        realm.objects(element).length === 0 ||
-        [
-          "exhibidortypes"
-        ].includes(element) === false ||
-        shouldUpdate
+      (element) => realm.objects(element).length === 0 || shouldUpdate
     );
-
 
     const incrementPercent = 99 / elementsToLoad.length;
 
     // Ejecuta todas las promesas en paralelo.
     await Promise.all(
       elementsToLoad.map(async (element) => {
-        return RequestUseCaseRetry(`/Config/${element}`, "GET", 100, 1000, timeout)
-          .then((response) => {
-            if (response.ok !== false) {
-              realm.write(() => {
-                realm.delete(realm.objects(element));
-              });
-              createBatchsWithRealm(response.data, element, realm);
-            }
-            
-            loadPercent += incrementPercent;
-            setConfigLoadPercent(loadPercent);            
-          })
-          .catch((error) => {
-            console.log("OCURRIO ALGO EN UNA DE LAS DESCARGAS ", error);
-          });
+        try {
+          const response = await RequestUseCaseRetry(`/Config/${element}`, "GET", 100, 1000, timeout);
+          if (response.ok !== false) {
+            realm.write(() => {
+              realm.delete(realm.objects(element));
+            });
+            createBatchsWithRealm(response.data, element, realm);
+          }
+
+          loadPercent += incrementPercent;
+          setConfigLoadPercent(loadPercent);
+        } catch (error) {
+          console.log("OCURRIO ALGO EN UNA DE LAS DESCARGAS ", error);
+        }
       })
     );
 

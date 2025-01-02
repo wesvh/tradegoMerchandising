@@ -13,8 +13,8 @@ export class ModelCompetetionBrandsDB extends Realm.Object<ModelCompetetionBrand
     properties: {
       number: "string",    
       name: "string",         
-      competitionSupplier: "competetionsuppliers", 
-      status: { default: false, type: "bool"},
+      competitionSupplier: "competetionsuppliers?", 
+      status: { default: true, type: "bool"},
     },
   };
 }

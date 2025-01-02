@@ -5,6 +5,8 @@ export const useInsertion = () => {
   
   const createBatchsWithRealm = async (ArrayToInsert: any[], table: string, realmStage: any) => {
     try {
+      console.log("Tabla ->", table, "Elementos a insertar", ArrayToInsert);
+            
       await validationInTransaction(realmStage.isInTransaction, 1500);
       const batchSize = 50; // Define el tamaño del bloque
       const totalObjects = ArrayToInsert.length;
@@ -17,14 +19,12 @@ export const useInsertion = () => {
         try {
           await validationInTransaction(realmStage.isInTransaction, 1500);
           realmStage.write(() => {
-            for (let i = batchStart; i < batchEnd; i++) {
+            for (let i = batchStart; i < batchEnd; i++) {         
               realmStage.create(table, ArrayToInsert[i], Realm.UpdateMode.Modified);
             }
           });
         } catch (error: any) {
-          console.log("data", ArrayToInsert[batchIndex]);
-          
-          console.error("Error al procesar el lote", batchIndex + 1, ":", error);
+          console.error("Error al procesar el lote", batchIndex + 1, ":", "Table:", table, error);
         }
       }
     } catch (error: any) {

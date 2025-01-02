@@ -3,10 +3,9 @@ import { ObjectSchema } from "realm";
 
 export class ModelProductSuppliersDB extends Realm.Object<ModelProductSuppliersDB> {
   number!: string;
-  code!: string;
   variantCode!: string;
   itemName!: string;
-  supplierOwn!: string;
+  supplierOwnNit!: string;
   competitionProduct!: object;
   competitionSupplier!: object;
   status!: boolean;
@@ -19,8 +18,8 @@ export class ModelProductSuppliersDB extends Realm.Object<ModelProductSuppliersD
       variantCode: "string",         
       itemName: "string", 
       supplierOwnNit: "string", 
-      competitionProduct: "competetionproducts",
-      competitionSupplier: "competetionsuppliers",
+      competitionProduct: "competetionproducts?",
+      competitionSupplier: "competetionsuppliers?",
       status: { default: true, type: "bool"}
     },
   };

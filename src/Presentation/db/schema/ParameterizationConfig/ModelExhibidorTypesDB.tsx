@@ -1,5 +1,5 @@
 import { Realm } from "@realm/react";
-import { BSON, ObjectSchema } from "realm";
+import { ObjectSchema } from "realm";
 
 export class ModelExhibidorTypesDB extends Realm.Object<ModelExhibidorTypesDB> {
   number!: string;

@@ -6,11 +6,11 @@ export const parametrizationConfig = [
     "exhibidortypes",
     "exhibidores",
     "competetionsuppliers",
-    "competetionbrands",
     "competetionproducts",
     "competetionactivitytypes",
     "competetionexhibidores",
     "productsuppliers",
     "reasonsnottovisit",
     "pointsalenews",
+    "competetionbrands"
 ];
